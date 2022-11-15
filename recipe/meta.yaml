@@ -1,5 +1,5 @@
 {% set name = "openff-qcsubmit" %}
-{% set version = "0.3.2" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/openforcefield/openff-qcsubmit/archive/{{ version }}.tar.gz
-  sha256: 781e93e8e99e7689ff0b30bf1bd785884793d394da82790a905ecf12155c4c40
+  sha256: e6061ef273ed75035d73986fae64e19410fe4549b50e52135b99b71d8c94ffdd
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -38,7 +38,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Automated tools for submitting molecules to QCFractal'
+  summary: Automated tools for submitting molecules to QCFractal
   description: |
     The OpenFF QCSubmit framework aims to facilitate curating and contributing
     new quantum chemical (QC) datasets to the QCArchive (or any other QCFractal instance),
