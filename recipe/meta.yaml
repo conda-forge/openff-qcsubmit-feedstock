@@ -26,7 +26,7 @@ requirements:
     - pyyaml
     - pydantic <2.0.0a0
     - basis_set_exchange
-    - typing-extensions
+    - typing_extensions
     - cachetools
 
 test:
