@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/openforcefield/openff-qcsubmit/archive/{{ version }}.tar.gz
-  sha256: e6061ef273ed75035d73986fae64e19410fe4549b50e52135b99b71d8c94ffdd
+  sha256: ba23dcf3608831581b1b0985de8b5a3786e74a5cf9667cb0d9bfec37ee831a32
 
 build:
   noarch: python
