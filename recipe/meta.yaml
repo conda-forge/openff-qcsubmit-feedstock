@@ -28,7 +28,7 @@ requirements:
     - basis_set_exchange
     - typing_extensions
 
-test:
+test: 
   imports:
     - openff.qcsubmit
 
