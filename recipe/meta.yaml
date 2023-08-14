@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/openforcefield/openff-qcsubmit/archive/{{ version }}.tar.gz
-  sha256: 62f2b0a964f497692e37f5341144be136cb14f19f1af83d9eeacacebcbbea06a
+  sha256: 3f01c05d0a298cc5d6062b94589a6484669f761c71d4252ff12bc1c9afce487d
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,15 +20,15 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - qcportal
-    - openff-toolkit-base >=0.12
+    - qcportal <0.50
+    - openff-toolkit-base >=0.12,<0.14.1
     - rdkit
     - pyyaml
     - pydantic <2.0.0a0
     - basis_set_exchange
     - typing_extensions
 
-test:
+test: 
   imports:
     - openff.qcsubmit
 
