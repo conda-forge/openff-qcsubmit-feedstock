@@ -1,5 +1,5 @@
 {% set name = "openff-qcsubmit" %}
-{% set version = "0.4.1" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,21 +7,21 @@ package:
 
 source:
   url: https://github.com/openforcefield/openff-qcsubmit/archive/{{ version }}.tar.gz
-  sha256: 3f01c05d0a298cc5d6062b94589a6484669f761c71d4252ff12bc1c9afce487d
+  sha256: f017f1d71940a9171e5ea6a8f210190b1314d3c67a430fb46028d1618aaf93f7
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
     - pip
   run:
-    - python >=3.8
+    - python >=3.9
     - qcportal <0.50
-    - openff-toolkit-base >=0.12,<0.14.1
+    - openff-toolkit-base >=0.12
     - rdkit
     - pyyaml
     - pydantic <2.0.0a0
