@@ -1,5 +1,5 @@
 {% set name = "openff-qcsubmit" %}
-{% set version = "0.50.0rc1" %}
+{% set version = "0.50.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/openforcefield/openff-qcsubmit/archive/{{ version }}.tar.gz
-  sha256: 41e94435a04ddaafda1a728760f54b614c9b7b4c3d84f5f07cfb49f7cb14ed7b
+  sha256: f642eccb803f5db07c9d87c998a7378a125abc7c27d594ed1a3d79c243fe4e0b
 
 build:
   noarch: python
