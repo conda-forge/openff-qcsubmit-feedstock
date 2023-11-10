@@ -20,6 +20,10 @@ requirements:
     - pip
   run:
     - python >=3.9
+    - numpy
+    - tqdm
+    - networkx
+    - qcelemental
     - qcportal >=0.49
     - openff-toolkit-base >=0.12
     - rdkit
