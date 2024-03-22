@@ -30,7 +30,7 @@ requirements:
     - pyyaml
     - pydantic <3.0.0a0
     - basis_set_exchange
-    - typing_extensions
+    - typing_extensions 
 
 test:
   imports:
