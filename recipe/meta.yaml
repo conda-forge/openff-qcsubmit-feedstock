@@ -23,7 +23,7 @@ requirements:
     - numpy
     - tqdm
     - networkx
-    - qcelemental
+    - qcelemental <=0.28
     - qcportal >=0.54
     - openff-toolkit-base >=0.12
     - rdkit
