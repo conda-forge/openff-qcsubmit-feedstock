@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -23,7 +23,8 @@ requirements:
     - numpy
     - tqdm
     - networkx
-    - qcelemental
+    # context https://github.com/MolSSI/QCElemental/issues/323#issuecomment-2297528477
+    - qcelemental <=0.28
     - qcportal >=0.54
     - openff-toolkit-base >=0.12
     - rdkit
