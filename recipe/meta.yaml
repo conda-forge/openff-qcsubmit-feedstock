@@ -11,16 +11,16 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - numpy
     - tqdm
     - networkx
@@ -35,6 +35,8 @@ requirements:
     - typing_extensions
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - openff.qcsubmit
 
