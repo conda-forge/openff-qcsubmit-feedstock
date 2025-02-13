@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - setuptools
     - versioningit
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - numpy
     - tqdm
     - networkx
