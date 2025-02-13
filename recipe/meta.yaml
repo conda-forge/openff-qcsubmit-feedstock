@@ -37,6 +37,8 @@ requirements:
     - typing_extensions
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - openff.qcsubmit
 
