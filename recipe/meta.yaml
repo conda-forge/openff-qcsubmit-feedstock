@@ -19,12 +19,12 @@ build:
 
 requirements:
   host:
-    - python {{ min_python }}
+    - python {{ python_min }}
     - pip
     - setuptools
     - versioningit
   run:
-    - python >={{ min_python }}
+    - python >={{ python_min }}
     - numpy
     - tqdm
     - networkx
@@ -41,7 +41,7 @@ requirements:
 
 test:
   requires:
-    - python {{ min_python }}
+    - python {{ python_min }}
   imports:
     - openff.qcsubmit
 
