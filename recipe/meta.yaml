@@ -30,6 +30,7 @@ requirements:
     - qcelemental <=0.28
     - qcportal >=0.54
     - openff-toolkit-base >=0.12
+    - openff-units <0.3.0
     - rdkit
     - pyyaml
     - pydantic <3.0.0a0
