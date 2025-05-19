@@ -1,6 +1,6 @@
 {% set org = "openforcefield" %}
 {% set name = "openff-qcsubmit" %}
-{% set version = "0.55.0" %}
+{% set version = "0.56.0" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
   
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -28,7 +28,7 @@ requirements:
     - networkx
     # context https://github.com/MolSSI/QCElemental/issues/323#issuecomment-2297528477
     - qcelemental <=0.28
-    - qcportal >=0.54
+    - qcportal >=0.61
     - openff-toolkit-base >=0.12
     - openff-units >0.2.0,<0.4.0
     - rdkit
