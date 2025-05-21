@@ -44,7 +44,7 @@ test:
   imports:
     - openff.qcsubmit
   files:
-    - test_openff_toolkit.py
+    - test_version_nonzero.py
   commands:
     - python test_version_nonzero.py
 
