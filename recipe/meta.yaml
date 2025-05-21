@@ -42,6 +42,10 @@ test:
     - python {{ python_min }}
   imports:
     - openff.qcsubmit
+  files:
+    - test_openff_toolkit.py
+  commands:
+    - python test_version_nonzero.py
 
 about:
   home: https://github.com/openforcefield/openff-qcsubmit
