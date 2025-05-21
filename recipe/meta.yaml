@@ -21,6 +21,7 @@ requirements:
     - python {{ python_min }}
     - pip
     - setuptools
+    - versioningit
   run:
     - python >={{ python_min }},<3.13.0a0
     - numpy
