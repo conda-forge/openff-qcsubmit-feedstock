@@ -13,7 +13,7 @@ source:
   
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -21,6 +21,7 @@ requirements:
     - python {{ python_min }}
     - pip
     - setuptools
+    - versioningit
   run:
     - python >={{ python_min }},<3.13.0a0
     - numpy
@@ -42,6 +43,10 @@ test:
     - python {{ python_min }}
   imports:
     - openff.qcsubmit
+  files:
+    - test_version_nonzero.py
+  commands:
+    - python test_version_nonzero.py
 
 about:
   home: https://github.com/openforcefield/openff-qcsubmit
