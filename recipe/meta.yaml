@@ -13,7 +13,7 @@ source:
   
 build:
   noarch: python
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -24,6 +24,7 @@ requirements:
     - versioningit
   run:
     - python >={{ python_min }},<3.13.0a0
+    - pkg_resources
     - numpy
     - tqdm
     - networkx
