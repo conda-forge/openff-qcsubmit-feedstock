@@ -13,7 +13,7 @@ source:
   
 build:
   noarch: python
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -31,7 +31,7 @@ requirements:
     - qcelemental <=0.29
     - qcportal >=0.61
     - openff-toolkit-base >=0.12
-    - openff-units >0.2.0,<0.4.0
+    - openff-units >0.3.0
     - rdkit
     - pyyaml
     - pydantic <3.0.0a0
