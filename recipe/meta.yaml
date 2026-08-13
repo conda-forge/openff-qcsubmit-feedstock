@@ -1,6 +1,6 @@
 {% set org = "openforcefield" %}
 {% set name = "openff-qcsubmit" %}
-{% set version = "0.57.0" %}
+{% set version = "0.58.0" %}
 
 package:
   name: {{ name|lower }}
@@ -13,30 +13,30 @@ source:
   
 build:
   noarch: python
-  number: 2
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
+  script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -vv --no-deps
 
 requirements:
   host:
     - python {{ python_min }}
     - pip
     - setuptools
-    - versioningit
+    - setuptools_scm
   run:
-    - python >={{ python_min }},<3.13.0a0
+    - python >={{ python_min }},<3.15.0a0
     - numpy
     - tqdm
     - networkx
-    # context https://github.com/MolSSI/QCElemental/issues/323#issuecomment-2297528477
-    - qcelemental <=0.29
-    - qcportal >=0.61
+    - qcelemental >=0.25.1
+    - qcportal >=0.65
     - openff-toolkit-base >=0.12
-    - openff-units >=0.3.0 
+    - openff-units >=0.4.0
     - rdkit
     - pyyaml
     - pydantic <3.0.0a0
     - basis_set_exchange
     - typing_extensions
+    - mdtraj
 
 test:
   requires:
