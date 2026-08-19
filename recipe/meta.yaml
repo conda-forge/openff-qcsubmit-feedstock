@@ -13,7 +13,7 @@ source:
   
 build:
   noarch: python
-  number: 0
+  number: 1
   script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -vv --no-deps
 
 requirements:
@@ -28,7 +28,7 @@ requirements:
     - tqdm
     - networkx
     - qcelemental >=0.25.1
-    - qcportal >=0.65
+    - qcportal >=0.65,<0.70.0a0
     - openff-toolkit-base >=0.12
     - openff-units >=0.4.0
     - rdkit
